@@ -1,8 +1,7 @@
-# TAA
-Low-impact, fairly okay anti-aliasing method
+# VanillAA
+This shaderpack is near-identical to vanilla rendering, except for supporting TAA. It's compatible with OptiFine and Iris.
 
-# AGX
-Inspired by Blender 4.0 AGX View Transform: More realistic renders by letting colors naturally become over-exposed. I let the light values stay super varied, nighttime being around 10% and daylight being at 120%. By having the camera adjust the exposure (while keeping most skylit scenes the same), I'm able to show off much more detail and naturally let things end up in deep shadows or bright light.
-
-# Other
-I kept this as vanilla-looking as possible, outside of the warmer lights. 
+## Credits
+* Vanilla rendering recreation from [XorDevs-Default-Shaderpack](https://github.com/XorDev/XorDevs-Default-Shaderpack)
+* TAA implementation from [BSL](https://bitslablab.com/bslshaders/)
+* FidelityFX CAS from [AMD](https://github.com/GPUOpen-Effects/FidelityFX-CAS), fragment shader version from [vkBasalt](https://github.com/DadSchoorse/vkBasalt)
