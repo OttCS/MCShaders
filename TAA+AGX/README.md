@@ -1,7 +1,10 @@
-# VanillAA
-This shaderpack is near-identical to vanilla rendering, except for supporting TAA. It's compatible with OptiFine and Iris.
+# TAA
+Temporal Anti-Aliasing is fairly cheap for decent results, even if it's a little blury in motion
 
-## Credits
-* Vanilla rendering recreation from [XorDevs-Default-Shaderpack](https://github.com/XorDev/XorDevs-Default-Shaderpack)
-* TAA implementation from [BSL](https://bitslablab.com/bslshaders/)
-* FidelityFX CAS from [AMD](https://github.com/GPUOpen-Effects/FidelityFX-CAS), fragment shader version from [vkBasalt](https://github.com/DadSchoorse/vkBasalt)
+# AGX
+Upcoming Blender 4.0 View Transform for much more realistic lights.
+
+# and...
+- A mostly vanilla feel
+- More "expressive" lighting: Blocklights have an "overexposure" to blow out a small radius, skylighting is tuned to be slightly more realistic
+- Auto-exposure to help keep scene lighting in better balance, and really emphasize shadows in sunlight or lights in dark areas
