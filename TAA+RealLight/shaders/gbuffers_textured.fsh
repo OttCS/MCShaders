@@ -46,7 +46,7 @@ vec4 mix3(vec4 a, vec4 b, vec4 c, float x, float midpoint) {
 
 uniform int worldTime;
 
-const vec4 Purkinje  = vec4(0.0, 0.6627, 1.0, 0.411559713784);
+const vec4 Purkinje  = vec4(0.0, 1.0, 0.6627, 0.411559713784);
 const vec4 noonlight = vec4(1.0, 254.0 / 255.0, 250.0 / 255.0, 1.0); // Noon sun
 const vec4 moonlight = vec4(1.0, 208.0 / 255.0, 171.0 / 255.0, 0.225878276314); // Moonlight
 const vec4 riselight = vec4(1.0, 254.0 / 255.0, 250.0 / 255.0, 0.631385035559); // Sun rise/set
