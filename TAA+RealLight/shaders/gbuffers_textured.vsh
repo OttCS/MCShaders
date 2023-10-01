@@ -34,19 +34,15 @@ void main()
     gl_Position = gl_ProjectionMatrix * gbufferModelView * vec4(pos,1);
     gl_FogFragCoord = length(pos);
 
-    //Calculate view space normal.
-    vec3 normal = normalize(gl_NormalMatrix * gl_Normal);
-    //Use flat for flat "blocks" or world space normal for solid blocks.
-    normal = (mc_Entity==1.) ? vec3(0,1,0) : (gbufferModelViewInverse * vec4(normal,0)).xyz;
-
-    //Calculate simple lighting. Thanks to @PepperCode1
-    float light = min(normal.x * normal.x * 0.6f + normal.y * normal.y * 0.25f * (3.0f + normal.y) + normal.z * normal.z * 0.8f, 1.0f);
-
     //Output color with lighting to fragment shader.
-    color = vec4(gl_Color.rgb * light, gl_Color.a);
+    color = gl_Color.rgba;
+
     //Output diffuse and lightmap texture coordinates to fragment shader.
     coord0 = (gl_TextureMatrix[0] * gl_MultiTexCoord0).xy;
-    coord1 = (gl_TextureMatrix[1] * gl_MultiTexCoord1).xy;
+    coord1 = smoothstep(0.1, 1.0, (gl_TextureMatrix[1] * gl_MultiTexCoord1).xy);
+
+    // Fixes dark halo around light sources - Gravity Tweak
+    // coord1.y = min(coord1.y + coord1.x, 1.0);
 
     gl_Position.xy = TAAJitter(gl_Position.xy, gl_Position.w);
 }
